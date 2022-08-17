@@ -681,11 +681,12 @@ body{
         width: 100%;
     }
     .trail_txt{
-        min-width: none;
+        min-width: 100px;
         margin: auto auto;
     }
     .game_img img{
         width: 300px;
     }
+
 
 }
