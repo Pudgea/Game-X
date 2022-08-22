@@ -14,6 +14,9 @@ body{
     padding: 0 10px;
 }
 /* header */
+.nav_link:first-child{
+    display: none;
+}
 .nav{
     padding: 25px 0 ;
     display: flex;
@@ -483,8 +486,54 @@ body{
     height: 40px;
     border-radius: 10px;
     right: 5%;
-    
 }
+#burger, [for=burger]:hover{
+    background-color: #7f7ff7;
+    color: rgb(213, 213, 213);
+    cursor: pointer;
+}
+.krest{
+    display: none;
+    font-size: 30px;
+    color: #000;
+    z-index: 2;
+    text-decoration: none;
+    position: fixed;
+}
+.krest:hover{
+    color: #646464;
+}
+
+/* footer */
+#footer_div{
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    padding: 70px 50px;
+}
+
+.block_footer{
+    width: 25%;
+    color: rgb(106, 106, 106);
+    font-size: 16px;
+    line-height: 25px;
+}
+    .block_footer p{
+        margin-top: 15px;
+    }
+.block_footer2{
+    margin-left: 20px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    column-gap: 80px;
+    line-height: 35px;
+}
+    .block_footer2 a{
+        text-decoration: none;
+        color: rgb(106, 106, 106);
+        font-size: 14px;
+    }
 
 /* adaptive */
 @media screen and (max-width: 1200px) {
@@ -503,7 +552,6 @@ body{
         width: 512px;
     }
 }
-
 @media screen and (max-width: 1199px) {
 	.container {
 		width: 100%;
@@ -511,7 +559,6 @@ body{
 	}
     
 }
-
 @media screen and (max-width: 991px) {
 	.container {
 		width: 100%;
@@ -597,28 +644,71 @@ body{
     .smart_increase{
         height: 100px;
     }
+    #footer_div{
+        flex-direction: column;
+    }
+    .block_footer{
+        width: 100%;
+        margin: 30px;   
+    }
+    .block_footer2{
+        width: 100%;
+        margin: 0 0;
+        flex-wrap: wrap;
+    }
 }
-
-
-
-
 @media screen and (max-width: 767px) {
     .nav_list{
         display: none;
-        row-gap: 10px;
-        font-size: 13px;
-        background-color: #9595fa;
-        border-radius: 10px;
-        border: 7px #9595fa solid;
-        position: absolute;
-        right: 50px;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 60%;
+        font-size: 18px;
+        position: fixed;
+        background-color: #fff;
+        overflow-x:hidden ;
+        box-shadow: -13px 0px 20px 0px #000;
+    }
+    .nav_link:first-child{
+        display: block;
+    }
+        .nav_list::-webkit-scrollbar{
+            width: 8px;
+            height: 8px;
+        }
+        .nav_list::-webkit-scrollbar-thumb{
+            background-color: #6464;
+            border-radius: 30px;
+        }
+        .nav_list::-webkit-scrollbar-thumb:hover{
+            background-color: #646464;
+            border-radius: 30px;
+        }
+        .nav_list::-webkit-scrollbar:hover{
+            width: 15px;
+            height: 15px;
+        }
+    .nav_link {
+        border-bottom: 2px solid #646464a3;
+        padding: 40px;
+        right: 30px;
     }
     [for=burger]{
         display: block;
     }
-    #burger:checked + label + .nav_list{
+    #burger:checked + label + a + .nav_list{
         display: block;
+        z-index: 2;
     }
+        #burger:checked + label + a{
+            display: block;
+            z-index: 3;
+            position: fixed;
+            top: 10px;
+            right: 20px;
+        }
+
 	.container {
 		width: 100%;
         margin: 0 auto;
@@ -670,7 +760,6 @@ body{
         font-size: 13px;
     }
 }
-
 @media screen and (max-width: 575px) {
     .slider_txt h1{
         font-size: 30px;
@@ -710,6 +799,13 @@ body{
     }
     .game_img img{
         width: 300px;
+    }
+    .block_footer2{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .block_footer{
+        margin-left: 0;
     }
 }
 
