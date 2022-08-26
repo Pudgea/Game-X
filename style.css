@@ -807,6 +807,9 @@ body{
     .block_footer{
         margin-left: 0;
     }
+    .nav_list{
+        width: 80%;
+    }
 }
 
 /* animation */

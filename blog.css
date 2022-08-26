@@ -1,0 +1,159 @@
+h1{
+    max-width: 600px;
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 50px;
+    color: rgb(29, 29, 29);
+    margin: 100px auto;
+}
+h2{
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 40px;
+    color: rgb(29, 29, 29);
+}
+h4{
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(29, 29, 29);
+    opacity: 0.7;
+}
+
+
+.blogs{
+    position: relative;
+}
+.blogs_div{
+    background-color: #fff;
+    padding:20px;
+    border-radius: 30px;
+}
+    .blogs_div h1{
+        text-align:center;
+    }
+
+.main_blog{
+    display: flex;
+    column-gap: 30px;
+}
+.main_blog_img{
+    width:45%;
+    max-height:500px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+    .main_blog_img img{
+        width: 100%;
+        border-radius: 30px;
+    }
+
+.main_blog_txt{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+    .main_blog_txt p{
+        padding-top: 20px;
+        color: rgb(84, 84, 84);
+        line-height: 30px;
+        font-weight: 400;
+        font-size: 16px;
+        width: 80%;
+    }
+
+.other_blogs{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    column-gap: 30px;
+}
+    .other_blogs .btn{
+        width: 170px;
+    }
+.other_blog{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-bottom: 50px;
+}
+    .other_blog img{
+        width: 100%;
+        border-radius: 30px;
+    }
+    .other_blog h2{
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 20px;
+        width: 100%;
+    }
+
+
+/* adaptive */
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 90%;
+        margin: 0 auto;
+	}   
+    h2{
+        font-size: 30px;
+    }
+
+
+
+}
+@media screen and (max-width: 991px) {
+	.container {
+		width: 90%;
+        margin: 0 auto;
+	}
+    .main_blog{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+        .main_blog_img, .main_blog_txt{
+            width: 90%;
+            margin: auto;
+        }
+}
+@media screen and (max-width: 767px) {
+	.container {
+		width: 100%;
+	}
+    h1{
+        font-size: 40px;
+    }
+    .other_blog{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 575px) {
+	.container {
+		width: 100%;
+	}
+    h2{
+        font-size: 25px;
+        line-height: 25px;
+        margin-top: 10px;
+    }
+    
+    h1{
+        font-size: 35px;
+    }
+    .main_blog p{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .other_blog{
+        width: 95%;
+        row-gap: 10px;
+    }
+     .other_blog h2{
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 20px;
+     }
+}
